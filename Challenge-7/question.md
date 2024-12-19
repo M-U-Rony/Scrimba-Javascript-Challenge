@@ -1,0 +1,1 @@
+Actually this is a CSS challenge. You have to make the website like this: https://www.figma.com/design/01HjiTq1GyFtFnEWp2pVk4/GiftChain.ai---JavaScriptmas?node-id=0-1&p=f&t=Qlm2O8z9bf4XHCUM-0
