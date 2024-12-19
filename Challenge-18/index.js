@@ -2,7 +2,16 @@ import shoppingCartData from "./data.js";
 
 
 function calculateCost(arr){
-    // Your code here!
+
+    let price =0;
+
+    for(const item of arr){
+        if(item.isGift){
+            price+= item.price;
+        }
+    }
+
+    return price.toFixed(2);
 }
 
 console.log(calculateCost(shoppingCartData)) //559.93 

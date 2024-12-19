@@ -10,8 +10,6 @@ But how much of that can you blame on Christmas?
 - Each gift has the isGift boolean set to true.
 - The total cost of gifts should be given to two decimal places.
 
-Expected output: 559.93  
-
 **Stretch Goal**
 
 - Use the reduce() method to complete this challenge.
