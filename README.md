@@ -1,2 +1,2 @@
 # Scrimba-Javascript-Challenge
-This Problems is created by Scrimba.com.
+This Problems are created by Scrimba.com.
