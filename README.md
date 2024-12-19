@@ -1,2 +1,3 @@
 These challenges are created by scrimba.com
-Check the question in question.md
+
+You'll find the question of every challenge in every folder in question.md file!
