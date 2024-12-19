@@ -1,5 +1,44 @@
 
 function correctChangeFromSanta(bills) {
+
+    let five=0,ten=0,twwnty=0,flag=0;
+
+    for(const element of bills){
+
+        if(element===20){
+            if(ten>0 && five>0){
+                ten--;
+                five--;
+                twwnty++;
+            }
+            else if(five>2){
+                five-=3;
+                twwnty++;
+            }
+            else{
+                return false;
+            }
+        }
+
+        else if(element===10){
+            if(five>0){
+                five--;
+                ten++;
+            }
+    
+            else{
+                return false
+            }
+        }
+
+        else{
+            five++;
+        }
+    };
+
+    return true;
+
+
     
 }
 
