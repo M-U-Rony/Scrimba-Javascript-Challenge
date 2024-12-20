@@ -1,6 +1,4 @@
 
-import shoppingList from "./shoppingList.js";
-
     You're shopping for holiday gifts, but money is tight
     so we need to consider the cheapest items first.
     Use JavaScript's built-in array sort() (or toSorted()) method to
