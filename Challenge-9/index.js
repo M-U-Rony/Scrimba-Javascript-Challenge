@@ -15,6 +15,7 @@ const recipes = [
     name: 'Roast Turkey with Stuffing',
     ingredients: ['turkey', 'bread crumbs', 'gluten', 'celery', 'onions', 'tomatoes', 'butter'],
   },
+
   {
     name: 'Classic Beef Wellington',
     ingredients: ['beef', 'mushrooms', 'puff pastry', 'eggs'],
@@ -49,3 +50,36 @@ const recipes = [
   },
 ];
 
+const lovedIngrediants=[];
+
+recipes.forEach(element =>{
+
+  let love=0,dislike=0;
+
+  element['ingredients'].forEach(ingredient =>{
+
+    guest['loves'].forEach(like =>{
+
+      if(like===ingredient){
+        love=1;
+      }
+  })
+
+  guest['dislikes'].forEach(hate =>{
+
+    if(hate===ingredient){
+      dislike=1;
+    }
+})
+    
+  })
+
+  if(love===1 && dislike===0){
+
+    lovedIngrediants.push({name:element['name'],ingredients:element['ingredients']});
+
+  }
+
+})
+
+console.log(lovedIngrediants);
