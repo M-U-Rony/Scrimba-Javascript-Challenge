@@ -1,25 +1,549 @@
-/*
-Link to Figma: https://scrimba.com/links/santa-saas-figma
-*/
-* {
-    --red: rgba(143, 0, 2, 0.83);
-    --light-red: #FFF2F2;
-    --dark-red: #470000;
-}
-
-nav {
-    background-color: var(--red);
-}
-
-ul, li {
+*{
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
     list-style-type: none;
 }
-img {
-    max-width: 100%;
+
+button{
+    cursor: pointer;
 }
 
-#customer img {
-    width: 100px;
+header{
+    height: 1050px;
+    background-color: rgba(143, 0, 2, 0.83);
+    color: white;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+   
+}
+
+.logo{
+
+    height: 100%;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    
+}
+
+.register{
+    display: flex;
+    height: 100%;
+    width: 280px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login{
+
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    background-color:rgba(143, 0, 2, 0.83);
+    color: white;
+    border: 1px solid white;
+}
+
+.signup{
+    
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid white;
+}
+
+.introduce{
+
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.introduce h1{
+    font-size: 80px;
+}
+
+.introduce p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.introduce-buttons{
+    display: flex;
+    height: 100px;
+    width: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.introduce-buttons .try{
+
+    height: 50px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: white;
+    color:rgba(143, 0, 2, 0.83);
+    border: 1px solid white;
+
+}
+
+.introduce-buttons .watch{
+
+    height: 50px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(143, 0, 2, 0.83);
+    color: white;
+    border: 1px solid white;
+    
+}
+
+.dashboard-img{
+    width: 1200px;
+    position: relative;
+    left: 150px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgb(199, 194, 194);
+
+}
+
+#product{
+
+    height: 650px;
+    width: 100vw;
+    margin-top: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product-title{
+    font-size: 40px;
+    color: #4d0a0a;
+}
+
+.product-description{
+    color: gray;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.cards h3{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.cards a{
+    color: #4d0a0a;
+    text-decoration: underline;
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.cards p{
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+
+.cards-size{
+
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid rgb(192, 182, 182);
+    text-align: left;
+    padding: 40px 0 0 20px;
+}
+
+#solution{
+    height: 600px;
+    width: 100%;
+    background-color: #f2f2ff;
+    display: flex;
+}
+
+.solution-box1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 30px;
+    padding-left: 100px;
+
+}
+
+.solution-box1 h2{
+    color:  #4d0a0a;
+    font-size: 35px;
+}
+
+.solution-box1 p{
+    color: rgb(163, 149, 149);
+}
+
+.profiles{
+    display: flex;
+    align-items: center;
+    
+}
+
+.profiles img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+
+#elf-1{
+    
+    position: relative;
+    right: 9px;
+}
+
+#elf-2{
+    
+    position: relative;
+    right: 17px;
+}
+
+.solution-box1 button{
+
+    height: 50px;
+    width: 170px;
+    border-radius: 10px;
+    background-color:#4d0a0a;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.solution-box2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.solution-box2 img{
+    height: 350px;
+}
+
+#pricing{
+
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#pricing h2{
+    font-size: 45px;
+    color: #4d0a0a;
+}
+
+#pricing p{
+    color: rgb(161, 161, 161);
+    text-align: center;
+}
+
+.monthly-annualy{
+    height: 60px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.select{
+    height: 40px;
+    width: 90px;
+    border-radius: 30px;
+    background-color: rgba(204, 199, 199,0.6);
+}
+
+.circle{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #4d0a0a;
+    position: relative;
+    right: 90px;
+}
+
+.cards-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 700px;
+    width: 400px;
+    border-radius: 20px;
+    border: 1px solid rgba(211, 209, 209,0.6);
+}
+
+.card .description{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.card .description  h3{
+    font-size: 30px;
+}
+
+.card .description  button{
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #4d0a0a;
+    color: white;
+    border: 1px solid #4d0a0a;
+}
+
+.value{
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.features{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 40px;
+    border-radius: 20px;
+}
+
+.icon-list{
+    display: flex;
+    gap: 10px;
+}
+
+
+#card-2{
+
+    background-color: #4d0a0a;
+    color: white;
+
+}
+
+#card-2 button{
+    background-color: white;
+    color: #4d0a0a;
+    font-weight: bolder;
+}
+
+.not-included{
+    text-decoration:line-through;
+}
+
+.last-two i{
+    color: #867171;
+}
+
+#customer{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.arrow-key{
+
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+    align-items: center;
+}
+
+.customer-header h1{
+    font-size: 35px;
+}
+
+.review-container{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  
+}
+.review{
+
+    border: 1px solid rgba(185, 179, 179,0.6);
+    padding: 30px 0 0 30px;
+    border-radius: 20px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+   
+
+}
+
+.name-photo img{
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.name-photo{
+    display: flex;
+    gap: 20px;
+}
+
+.name-photo .name{
+    display: flex;
+    flex-direction: column;
+}
+
+.review blockquote{
+    line-height: 1.7;
+}
+
+.review p,blockquote{
+    color: gray;
+}
+
+#review-3 .rating{
+    margin-top: 27px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+}
+
+footer .footer-intro img{
+    height: 40px;
+    width: 40px;
+}
+
+footer .footer-intro{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    margin-left: 50px;
+    row-gap: 30px;
+}
+
+footer .footer-intro .logo-name{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    gap: 20px;
+
+}
+
+footer .footer-intro p{
+    line-height: 1.6;
+}
+
+footer .about-us{
+    display: flex;
+    height: 100%;
+    width: 60%;
+    
+}
+
+footer .about-us{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .about-us .about{
+
+    height: 100%;
+    width: 15%;
+}
+
+footer .about-us .about ul{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+    color:#867171
+
+}
+
+footer .about-us .about ul li a{
+    color:#867171
+}
+
+.copyright{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#867171
+}
