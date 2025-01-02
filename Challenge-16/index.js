@@ -1,4 +1,4 @@
-import { workshopData } from '/data.js'
+import { workshopData } from './data.js'
 
 // Function to find the elf who created more presents than they delivered
 function findNaughtyElf(data) {
@@ -9,35 +9,37 @@ function findNaughtyElf(data) {
 
     // Recursive function to sum toy counts
     function sumToys(shipmentData) {
+
       for (const region in shipmentData) {
+
         const subRegion = shipmentData[region];
+        
         if (Array.isArray(subRegion)) {
           // If it's an array, sum toy counts
           subRegion.forEach(({ toy, count }) => {
-            totalShipped[toy] = (totalShipped[toy] || 0) + count
+            totalShipped[toy] = (totalShipped[toy] || 0) + count;
           })
         } else {
           // If it's an object, recurse further
-          sumToys(region)  
+          sumToys(subRegion);
         }
       }
     }
 
     // Calculate total toys shipped
-    sumToys(elf)
+    sumToys(elf.toysShipped);
 
     // Compare toysMade to totalShipped
     for (const toy in elf.toysMade) {
       if (elf.toysMade[toy] > (totalShipped[toy] || 0)) {
-        naughtyElves.push(elf.name)
-        break
+        naughtyElves.push(elf.name);
+        break;
       }
     }
   })
 
-  return naughtyElves.join(', ')
+  return naughtyElves.join(', ');;
 }
 
 // Example usage
-console.log(findNaughtyElf(workshopData)) //Elf Kalvin Armadillo
-
+console.log(findNaughtyElf(workshopData)); //Elf Kalvin Armadillo
