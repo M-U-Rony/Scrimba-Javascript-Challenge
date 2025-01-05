@@ -74,6 +74,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 400px;
+    cursor: pointer;
 }
 
 /* images */
@@ -82,6 +83,11 @@ main {
     width: 60px;
     border-radius: 50%;
     border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.seen{
+    filter: grayscale(100%);
 }
 
 .highlight {
@@ -96,16 +102,15 @@ main {
     height: 400px;
     object-fit: cover; 
     border: 3px solid white;
+    
 }
-
-/* loading animation */
 
 .ux-loading {
     animation: myAnim 1s linear 0s infinite normal forwards;
     font-size: 3em;
 }
 
-@keyframes myAnim {
+ @keyframes myAnim {
 	0% {
 		opacity: 0.8;
 		transform: scale(0.2);
