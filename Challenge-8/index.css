@@ -27,6 +27,11 @@ body {
     margin: 1em auto; 
     justify-content: center;
     background-color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    gap: 20px;
 }
 
 button.letter{
@@ -38,6 +43,7 @@ button.letter{
     color: white;
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
 }
 
 button.letter:hover, button.letter:focus{
@@ -48,6 +54,12 @@ button.letter:hover, button.letter:focus{
 button.letter:active {
     background-color: #d9f7f7;
     color: black;
+}
+
+button.letter:disabled {
+    background-color: #999;
+    color: white;
+    cursor: not-allowed;
 }
 
 .guess-char {    
@@ -107,7 +119,11 @@ button.letter:active {
     top: 58px;
     left: 90px;
     z-index: 2;
-    visibility: hidden;
+    /* visibility: hidden; */
+}
+
+.visible {
+    visibility: visible;
 }
 
 .puddle {
