@@ -8,4 +8,4 @@ function renderKeyboard () {
     keyboardContainer.innerHTML = keyBoardHtml.join('')
 }
 
-export { renderKeyboard }
+export { renderKeyboard,keyboardContainer }
