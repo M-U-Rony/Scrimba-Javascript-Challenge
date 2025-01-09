@@ -37,3 +37,7 @@ h1 {
     color: black;
     cursor: default;
 }
+
+h2{
+    margin-bottom: 50px;
+}
