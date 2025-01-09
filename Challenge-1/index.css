@@ -81,7 +81,7 @@ body {
   }
   
   #shopping-list {
-    list-style: "🎁 ";
+    list-style: "🎯";
   }
   
   #shopping-list li {
@@ -117,12 +117,12 @@ body {
     border: 1px solid gray;
     border-radius: 10px;
     visibility:hidden ;
+    background-color: white;
   }
 
   .edit-name{
 
     position: relative;
-    top: 10%;
     height: 25%;
     width: 80%;
     border: 2px solid blueviolet;
@@ -132,6 +132,18 @@ body {
   .edit-button{
 
     position: relative;
-    top: 15%;
+    top: 7%;
 
+  }
+
+  .inputtag{
+    width: 90%;
+    font-family: 'Caveat';
+    font-size: 25px;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+
+  .fa-check{
+    margin-top: 12px;
   }
